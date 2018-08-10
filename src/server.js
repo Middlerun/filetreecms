@@ -8,18 +8,18 @@ function isObject(value) {
 }
 
 function startServer(contentRoot, port) {
-  const app = express()
+  const server = express()
 
-  app.use('/content', express.static(
+  server.use('/content', express.static(
     contentRoot,
     { redirect: false }
   ))
 
-  app.get(/^\/content$/, (req, res) => {
+  server.get(/^\/content$/, (req, res) => {
     res.redirect('/content/')
   })
 
-  app.get('/content/*', (req, res) => {
+  server.get('/content/*', (req, res) => {
     const contentPath = req.params[0].replace(/\/$/, '')
     const filePath = path.join(contentRoot, contentPath)
 
@@ -67,7 +67,7 @@ function startServer(contentRoot, port) {
     })
   })
 
-  return app.listen(port, () => console.log(`Listening on port ${port}`))
+  return server.listen(port, () => console.log(`Listening on port ${port}`))
 }
 
 module.exports = startServer
