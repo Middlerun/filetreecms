@@ -53,7 +53,7 @@ function startServer(contentRoot, port) {
           contents: availableFiles.map(filename => {
             const fileObj = {
               name: filename,
-              path: `/content${contentPath ? '/' + contentPath : ''}/${filename}`
+              path: `/content${contentPath ? '/' + contentPath : ''}/${filename}`,
             }
             if (meta[filename]) {
               fileObj.meta = meta[filename]

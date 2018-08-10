@@ -1,7 +1,7 @@
 const path = require('path')
 const request = require('supertest')
 
-const startServer = require('./server')
+const startServer = require('./src/server')
 
 const port = process.env.TEST_PORT || 3002
 let server
