@@ -1,5 +1,7 @@
 # FileTreeCMS
 
+[ ![Codeship Status for Middlerun/filetreecms](https://app.codeship.com/projects/51ab68d0-7ecf-0136-97e6-0a6364239769/status?branch=master)](https://app.codeship.com/projects/301392)
+
 FileTreeCMS is an Express-based static file server which also lets clients query directory contents. It is intended for use as a headless CMS for people who don't need fancy GUIs.
 
 ## Setup
