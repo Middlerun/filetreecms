@@ -4,7 +4,7 @@ FileTreeCMS is an Express-based static file server which also lets clients query
 
 ## Setup
 
-Put your content files in the `content` directory (under the project root), or specify a custom directory with the `CONTENTROOT` environment variable.
+Put your content files in the `content` directory (under the project root), or specify a custom directory with the `CONTENT_ROOT` environment variable.
 
 Install dependencies:
 
