@@ -15,6 +15,10 @@ function startServer(contentRoot, port) {
     { redirect: false }
   ))
 
+  app.get(/^\/content$/, (req, res) => {
+    res.redirect('/content/')
+  })
+
   app.get('/content/*', (req, res) => {
     const contentPath = req.params[0].replace(/\/$/, '')
     const filePath = path.join(contentRoot, contentPath)
