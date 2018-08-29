@@ -11,9 +11,9 @@ function startServer(contentRoot, port, corsOrigin) {
   const server = express()
 
   if (corsOrigin) {
-    server.use(function(req, res, next) {
-      res.header("Access-Control-Allow-Origin", corsOrigin)
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    server.use(function (req, res, next) {
+      res.header('Access-Control-Allow-Origin', corsOrigin)
+      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
       next()
     })
   }
